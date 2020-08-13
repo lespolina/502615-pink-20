@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк. Фотографии пользователей</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -10,7 +11,7 @@
       <div class="page-header__wrapper">
 
         <a class="page-header__logo" href="index.html">
-          <img src="img/logo.svg" width="74" height="23" alt="Приложение «Пинк»">
+          <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Приложение «Пинк»">
         </a>
 
         <nav class="main-nav">
@@ -36,24 +37,25 @@
     </header>
 
     <main class="page-main">
-      <div class="page-title">
-        <h1 class="page-title__title">Фотографии пользователей</h1>
-      </div>
+
+      <section class="promo promo-inner">
+        <h1 class="promo__slogan">Фотографии пользователей</h1>
+      </section>
 
       <section class="gallery">
         <h2 class="visually-hidden">Галерея с фотографиями</h2>
 
-        <p class="gallery__description>">Взгляните на фотографии, которые выкладывают пользователи!
+        <p class="gallery__description">Взгляните на фотографии, которые выкладывают пользователи!
           Видите, как не хватает ваших?</p>
 
         <article class="gallery__item photo-card photo-card--panorama">
           <div class="photo-card__label">
-            Панорама дня
+            <p class="photo-card__text">Панорама дня</p>
           </div>
           <img src="img/panorama.jpg" alt="Панорама">
 
           <div class="gallery__caption">
-            <h3 class="gallery__user-name">Анна<span>(5 минут назад)</span></h3>
+            <h3 class="gallery__user-name">Анна<span class="gallery__time">(5 минут назад)</span></h3>
             <p class="gallery__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
             <button class="gallery__like" type="button" aria-label="Like"></button>
             <p class="gallery-counter">Нравится: 215</p>
@@ -64,7 +66,7 @@
           <img src="img/img1.jpg" alt="Фото">
 
           <div class="gallery__caption">
-            <h3 class="gallery__user-name">Левон<span>(5 часов назад)</span></h3>
+            <h3 class="gallery__user-name">Левон<span class="gallery__time">(5 часов назад)</span></h3>
             <p class="gallery__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
             <button class="gallery__like" type="button" aria-label="Like"></button>
             <p class="gallery-counter">Нравится: 356</p>
@@ -75,7 +77,7 @@
           <img src="img/img2.jpg" alt="Фото">
 
           <div class="gallery__caption">
-            <h3 class="gallery__user-name">Антон<span>(12 часов назад)</span></h3>
+            <h3 class="gallery__user-name">Антон<span class="gallery__time">(12 часов назад)</span></h3>
             <p class="gallery__comment">Соседи будут рады!</p>
             <button class="gallery__like" type="button" aria-label="Like"></button>
             <p class="gallery-counter">Нравится: 666</p>
@@ -86,7 +88,7 @@
           <img src="img/img3.jpg" alt="Фото">
 
           <div class="gallery__caption">
-            <h3 class="gallery__user-name">Борис<span>(20 часов назад)</span></h3>
+            <h3 class="gallery__user-name">Борис<span class="gallery__time">(20 часов назад)</span></h3>
             <p class="gallery__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
             <button class="gallery__like" type="button" aria-label="Like"></button>
             <p class="gallery-counter">Нравится: 215</p>
@@ -97,7 +99,7 @@
           <img src="img/img4.jpg" alt="Фото">
 
           <div class="gallery__caption">
-            <h3 class="gallery__user-name">Сергей<span>(25 часов назад)</span></h3>
+            <h3 class="gallery__user-name">Сергей<span class="gallery__time">(25 часов назад)</span></h3>
             <p class="gallery__comment">Самая кубанская в мире!</p>
             <button class="gallery__like" type="button" aria-label="Like"></button>
             <p class="gallery-counter">Нравится: 4</p>
@@ -108,7 +110,7 @@
           <img src="img/img5.jpg" alt="Фото">
 
           <div class="gallery__caption">
-            <h3 class="gallery__user-name">Максим<span>(40 часов назад)</span></h3>
+            <h3 class="gallery__user-name">Максим<span class="gallery__time">(40 часов назад)</span></h3>
             <p class="gallery__comment">Где снег-то?</p>
             <button class="gallery__like" type="button" aria-label="Like"></button>
             <p class="gallery-counter">Нравится: 150</p>
@@ -119,7 +121,7 @@
           <img src="img/img6.jpg" alt="Фото">
 
           <div class="gallery__caption">
-            <h3 class="gallery__user-name">Надежда<span>(45 часов назад)</span></h3>
+            <h3 class="gallery__user-name">Надежда<span class="gallery__time">(45 часов назад)</span></h3>
             <p class="gallery__comment">Всем GM и взаимные лайки!</p>
             <button class="gallery__like" type="button" aria-label="Like"></button>
             <p class="gallery-counter">Нравится: 2560</p>
@@ -129,11 +131,46 @@
 
       </section>
 
+      <section class="upload">
+        <div class="upload_title">
+          <h2 class="visually-hidden">Опубликовать фото</h2>
+          <p class="upload_slogan">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+        </div>
+
+        <div class="upload__wrapper">
+
+          <img class="post__img" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Фото">
+
+          <form class="upload__controls" action="https://echo.htmlacademy.ru/" method="post">
+            <ul class="upload__list">
+              <li class="upload__item">
+                <input class="visually-hidden" type="radio" id="crop" name="controls" aria-label="Обрезка">
+                <label for="crop">Обрезка</label>
+              </li>
+              <li class="upload__item">
+                <input class="visually-hidden" type="radio" id="fill" name="controls" aria-label="Заливка">
+                <label for="fill">Заливка</label>
+              </li>
+              <li class="upload__item">
+                <input class="visually-hidden" type="radio" id="contrast" name="controls" aria-label="Контраст">
+                <label for="contrast">Контраст</label>
+              </li>
+            </ul>
+
+            <input class="upload__range" type="range" min="1" max="100" name="crop-range" value="80">
+            <div class="upload__buttons">
+              <button class="upload__button button button-submit" type="submit">Запостить</button>
+              <button class="upload__button button button-reset" type="reset">Отмена</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
       <footer class="page-footer">
         <div class="page-footer__wrapper">
           <div class="footer__logo logo">
               <a class="logo__link" href="index.html" aria-label="Логотип Пинк">
-              <img src="img/logo-footer.svg" width="145" height="40" alt="Логотип Пинк">
+              <img src="img/logo-pink-blue-mobile.svg" width="145" height="40" alt="Логотип Пинк">
             </a>
           </div>
           <div class="page-footer__social social">
@@ -151,7 +188,9 @@
           </div>
           <div class="page-footer__copyright copyright">
             <p class="copyright__text">Разработано</p>
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+            </a>
           </div>
         </div>
       </footer>
