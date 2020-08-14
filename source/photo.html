@@ -131,14 +131,14 @@
       </section>
 
       <section class="upload">
-        <div class="upload_title">
+        <div class="upload__title">
           <h2 class="visually-hidden">Опубликовать фото</h2>
-          <p class="upload_slogan">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+          <p class="upload__slogan">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
         </div>
 
         <div class="upload__wrapper">
 
-          <img class="post__img" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Фото">
+          <img class="upload__img" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Фото">
 
           <form class="upload__controls" action="https://echo.htmlacademy.ru/" method="post">
             <ul class="upload__list">
@@ -155,11 +155,12 @@
                 <label for="contrast">Контраст</label>
               </li>
             </ul>
-
-            <input class="upload__range" type="range" min="1" max="100" name="crop-range" value="80">
+            <div class="upload__range-wrapper">
+              <input class="upload__range" type="range" min="1" max="100" name="crop-range" value="80">
+            </div>
             <div class="upload__buttons">
-              <button class="upload__button button button-submit" type="submit">Запостить</button>
-              <button class="upload__button button button-reset" type="reset">Отмена</button>
+              <button class="upload__button button button--submit" type="submit">Запостить</button>
+              <button class="upload__button button button--reset" type="reset">Отмена</button>
             </div>
           </form>
         </div>
